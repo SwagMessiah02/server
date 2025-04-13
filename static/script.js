@@ -5,13 +5,15 @@ function atualizarMensagens() {
             let mensagensDiv = document.getElementById('mensagens');
             mensagensDiv.innerHTML = '';
 
+            let ultimaMensagem = data[data.length - 1];
+
             if (data.length > 0) {
-                data.forEach(msg => {
+                //data.forEach(msg => {
                     let div = document.createElement('div');
                     div.className = 'mensagem';
-                    div.textContent = msg;
+                    div.textContent = ultimaMensagem;
                     mensagensDiv.appendChild(div);
-                });
+                //});
 
             } else {
                 mensagensDiv.innerHTML = '<p>Nenhuma mensagem recebida ainda.</p>';
