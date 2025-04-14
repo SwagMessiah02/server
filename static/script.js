@@ -28,4 +28,4 @@ function mostrarSecao(selecao) {
     document.getElementById(selecao).style.display = 'block';
 }
 
-setInterval(atualizarMensagens, 1000);
+setInterval(atualizarMensagens, 500);
