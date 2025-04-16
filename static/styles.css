@@ -7,14 +7,13 @@ body {
 .container {
     padding: 20px;
     border: 1px solid #ddd;
-    vertical-align: auto;
-    display: inline-block; 
+    display: inline-block;
 }
 
 .botao {
     margin: 10px;
     padding: 10px;
-    background: rgb(153, 255, 0);
+    background: red;
     color: white;
     border: none;
     cursor: pointer;
@@ -34,8 +33,9 @@ body {
 
 #mensagens {
     max-height: 300px;
+    overflow-y: auto;
     border: 1px solid #ddd;
     padding: 10px;
     background: #f4f4f4;
-    text-align: center;
-}   
+    text-align: left;
+}
