@@ -32,10 +32,11 @@ body {
 }
 
 #mensagens {
+    width: auto;
     max-height: 200px;
     overflow-y: auto;
     border: 1px solid #ddd;
-    padding: 10px;
+    padding: 1px;
     background: #f4f4f4;
     text-align: left;
 }

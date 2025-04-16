@@ -1,3 +1,18 @@
+const botao_exibir = document.getElementById("botao_exibir");
+const botao_reset = document.getElementById("botao_reset");
+ 
+botao_exibir.addEventListener("click", () => {
+    document.getElementById('logs-container').style.display = 'none';
+    document.getElementById('logs-container').style.display = 'block';
+});
+
+botao_reset.addEventListener("click", () => {
+    fetch('/reset', { method: 'POST' })
+        .then(() => atualizarMensagens());
+});
+
+setInterval(atualizarMensagens, 2000);
+
 function atualizarMensagens() {
     fetch('/mensagens')
         .then(response => response.json())
@@ -18,15 +33,3 @@ function atualizarMensagens() {
             }
         });
 }
-
-function resetarMensagens() {
-    fetch('/reset', { method: 'POST' })
-        .then(() => atualizarMensagens());
-}
-
-function mostrarSecao(selecao) {
-    document.getElementById('logs-container').style.display = 'none';
-    document.getElementById(selecao).style.display = 'block';
-}
-
-setInterval(atualizarMensagens, 2000);

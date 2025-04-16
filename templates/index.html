@@ -9,16 +9,15 @@
 <body>
     <div class="container">
         <h2> Sensor de temperatura </h2>
-        <button class="botao" onclick="mostrarSecao('logs-container')"> Exibir temperatura </button>
+        <button class="botao" id="botao_exibir"> Exibir Temperatura </button>
         <div id="logs-container" class="hidden">
             <h3> Temperatura </h3>
             <div id="mensagens">
-                <p>Nenhuma mensagem recebida ainda.</p>
+                <p> Nenhuma mensagem recebida ainda </p>
             </div>
-            <button class="botao" onclick="resetarMensagens()">Resetar Mensagens</button>
+            <button class="botao" id="botao_reset"> Limpar Mensagens </button>
         </div>
     </div>
-
     <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>
