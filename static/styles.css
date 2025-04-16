@@ -7,6 +7,7 @@ body {
 .container {
     padding: 20px;
     border: 1px solid #ddd;
+    vertical-align: auto;
     display: inline-block; 
 }
 
